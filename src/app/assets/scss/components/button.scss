@@ -1,0 +1,122 @@
+// button.scss
+
+@import '../abstract//variables.scss';
+@import '../abstract/mixins.scss';
+
+.btn {
+  padding: 17px 25px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 600;
+  border-radius: 5px;
+  
+  &.default {
+    background-color: $primary-color;
+    color: white;
+    @include hover-darken($primary-color);
+   
+  }
+
+  &.outline {
+    background-color: transparent;
+    border: 2px solid currentColor;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &.rounded-pill {
+    border-radius: 50px;
+  }
+
+  &.primary {
+    background-color: $primary-color;
+    color: white;
+    @include hover-darken($primary-color);
+  }
+
+  &.success {
+    background-color: $success-color;
+    color: white;
+    @include hover-darken($success-color);
+  }
+
+  &.info {
+    background-color: $info-color;
+    color: white;
+    @include hover-darken($info-color);
+  }
+
+  &.warning {
+    background-color: $warning-color;
+    color: black;
+    @include hover-darken($warning-color);
+  }
+
+  &.danger {
+    background-color: $danger-color;
+    color: white;
+    @include hover-darken($danger-color);
+  }
+
+  &.dark {
+    background-color: $dark-color;
+    color: white;
+    @include hover-darken($dark-color);
+  }
+
+  &.light {
+    background-color: $light-color;
+    color: black;
+    @include hover-darken($light-color);
+  }
+
+  &.blue {
+    background-color: $blue-color;
+    color: white;
+    @include hover-darken($blue-color);
+  }
+
+  &.pink {
+    background-color: $pink-color;
+    color: white;
+    @include hover-darken($pink-color);
+  }
+
+  &.secondary {
+    background-color: $secondary-color;
+    color: white;
+    @include hover-darken($secondary-color);
+  }
+
+  &.demo {
+    background: linear-gradient(93.87deg, $gradient-start, $gradient-end);
+    color: white;
+    @include gradient-hover-darken($gradient-start, $gradient-end);
+    border-radius: 5px;
+  }
+}
+
+
+
+
+.waves-effect {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-tap-highlight-color: transparent
+}
+
+.waves-light {
+  background: rgba(255, 255, 255, .4);
+  background: radial-gradient(rgba(255, 255, 255, .2) 0, rgba(255, 255, 255, .3) 40%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .5) 60%, rgba(255, 255, 255, 0) 70%)
+}

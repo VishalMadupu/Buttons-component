@@ -1,0 +1,15 @@
+
+@import './variables.scss';
+
+@mixin hover-darken($color) {
+    &:hover {
+      background-color: darken($color, 10%);
+    }
+  }
+  
+  @mixin gradient-hover-darken($start, $end) {
+    &:hover {
+      background: linear-gradient(93.87deg, darken($start, 10%), darken($end, 10%));
+    }
+  }
+  
