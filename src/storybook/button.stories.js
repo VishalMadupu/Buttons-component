@@ -69,7 +69,7 @@ export const OutlineButtons = () => (
 export const DemoButtons = () => (
   <div>
     <Button variant={'btn primary'} default>demo</Button>
-    <br />
+
     <Button variant={'btn danger'} rounded>demo</Button>
     <Button variant={'btn danger'} className='btn demo rounded-pill wave-effect waves-light'>demo</Button>
   </div>
