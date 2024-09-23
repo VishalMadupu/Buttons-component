@@ -2,17 +2,17 @@
 
 import React from 'react';
 
-
-const Button = ({ onClick, children, variant = 'default', rounded = false, outline = false, ...props }) => {
+const Button = ({ onClick, children, variant = 'default', rounded = false, outline = false, size = '', ...props }) => {
   const classNames = [
     'btn',
     variant,
     rounded ? 'rounded-pill' : '',
     outline ? 'outline' : '',
+    size ? `btn-${size}` : '',
   ].join(' ');
 
   const handleOnclick = () => {
-    console.log("buttob clicked")
+    console.log("button clicked");
   };
 
   return (

@@ -1,5 +1,6 @@
-// home.js
+
 'use client'
+
 import React from 'react';
 import Button from './components/mybutton/page';
 
@@ -21,52 +22,48 @@ const Home = () => {
       <h4 className="header-title">Default Buttons</h4>
       <div className="button-list">
         {buttonVariants.map((button, index) => (
-
-          <Button
-            key={index}
-            variant={button.color}
-            
-            >
+          <Button key={index} variant={button.color} size="lg">
             {button.name}
-           
           </Button>
         ))}
-        <Button variant="light">Light</Button>
-        <Button variant="white">White</Button>
-        <Button variant="link">Link</Button>
+        <Button variant="light" size="lg">Light</Button>
+        <Button variant="white" size="lg">White</Button>
+        <Button variant="link" size="lg">Link</Button>
       </div>
 
       <h4 className="header-title">Rounded Buttons</h4>
       <div className="button-list">
         {buttonVariants.map((button, index) => (
-          <Button key={index} variant={button.color} rounded>
+          <Button key={index} variant={button.color} size="md" rounded>
             {button.name}
           </Button>
         ))}
-        <Button variant="light" rounded>Light</Button>
-        <Button variant="white" rounded>White</Button>
+        <Button variant="light" size="md" rounded>Light</Button>
+        <Button variant="white" size="md" rounded>White</Button>
       </div>
 
       <h4 className="header-title">Outline Buttons</h4>
       <div className="button-list">
         {buttonVariants.map((button, index) => (
-          <Button key={index} variant={button.color} outline>
+          <Button key={index} variant={button.color} outline size="sm">
             {button.name}
           </Button>
         ))}
-        <Button variant="light" outline>Light</Button>
-        <Button variant="white" outline>White</Button>
+        <Button variant="light" outline size="sm">Light</Button>
+        <Button variant="white" outline size="sm">White</Button>
       </div>
 
-
-
-      <Button variant={'btn primary'} default>demo</Button>
+      <Button variant="primary" size="lg" rounded>demo</Button>
+      <b>large</b>
       <br />
-
-
-      <Button variant={'btn danger'} rounded>demo</Button>
-
-      <Button variant={'btn danger'} className='btn demo rounded-pill wave-effect waves-light '   >demo</Button>
+      <Button size="md" variant="danger" rounded>demo</Button>
+      <b>mediam</b>
+      <br />
+      <Button size="sm" variant="danger"  rounded>demo</Button> {/**className='btn demo'**/}
+      <b>small</b>
+      <br />
+      <Button size="xs" variant="danger" rounded>demo</Button>
+      <b>extra small</b>
     </div>
   );
 };

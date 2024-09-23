@@ -1,4 +1,4 @@
-// button.stories.js
+
 import React from 'react';
 import Button from '../app/components/mybutton/page';
 import '../storybook/button.stories.scss';
@@ -25,7 +25,7 @@ export const DefaultButtons = () => (
     <h4 className="header-title">Default Buttons</h4>
     <div className="button-list">
       {buttonVariants.map((button, index) => (
-        <Button key={index} variant={button.color}>
+        <Button key={index} variant={button.color}  size="lg">
           {button.name}
         </Button>
       ))}
@@ -41,7 +41,7 @@ export const RoundedButtons = () => (
     <h4 className="header-title">Rounded Buttons</h4>
     <div className="button-list">
       {buttonVariants.map((button, index) => (
-        <Button key={index} variant={button.color} rounded>
+        <Button key={index} variant={button.color} rounded  size="md">
           {button.name}
         </Button>
       ))}
@@ -56,7 +56,7 @@ export const OutlineButtons = () => (
     <h4 className="header-title">Outline Buttons</h4>
     <div className="button-list">
       {buttonVariants.map((button, index) => (
-        <Button key={index} variant={button.color} outline>
+        <Button key={index} variant={button.color} outline  size="sm">
           {button.name}
         </Button>
       ))}
@@ -68,9 +68,9 @@ export const OutlineButtons = () => (
 
 export const DemoButtons = () => (
   <div>
-    <Button variant={'btn primary'} default>demo</Button>
+    <Button variant={'btn primary'} rounded size="lg">demo</Button>
 
-    <Button variant={'btn danger'} rounded>demo</Button>
-    <Button variant={'btn danger'} className='btn demo rounded-pill wave-effect waves-light'>demo</Button>
+    <Button variant={'btn danger'} rounded size="md"> demo</Button>
+    <Button variant={'btn danger'}  size="sm" rounded>demo</Button> {/** className='btn demo rounded-pill wave-effect waves-light' */}
   </div>
 );
